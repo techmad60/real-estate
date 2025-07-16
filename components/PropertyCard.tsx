@@ -27,7 +27,7 @@ const PropertyCard = ({
     className="font-montsy w-[280px] sm:w-[320px] md:w-[360px] lg:w-[380px]
  rounded-lg transition-transform duration-200 hover:scale-[1.02]"
   >
-    <div className="w-full rounded-md aspect-[3/2] overflow-hidden">
+    <div className="w-full rounded-4xl aspect-[3/2] overflow-hidden">
       <Image
         src={image}
         alt={title}

@@ -1,8 +1,68 @@
 import Header from "@/components/Header";
 import { PiArrowCircleDownThin } from "react-icons/pi";
 import Image from "next/image";
+import PrimaryButton from "@/components/ui/Button";
+import PropertyCard from "@/components/Card";
 
 export default function Home() {
+  const properties = [
+    {
+      image: "/images/grid-img-1.jpg",
+      address: "2, Sunnyvale Rd",
+      title: "Sunnyvale Retreat",
+      beds: 4,
+      baths: 3,
+      sqft: 2500,
+      price: "$399,000",
+    },
+    {
+      image: "/images/grid-img-2.jpg",
+      address: "29, Surulere Rd",
+      title: "Sky Dive Villa",
+      beds: 4,
+      baths: 6,
+      sqft: 2000,
+      price: "$439,000",
+    },
+    {
+      image: "/images/grid-img-3.jpg",
+      address: "15, Strata Ave",
+      title: "Sunnyvale Retreat",
+      beds: 2,
+      baths: 2,
+      sqft: 1500,
+      price: "$298,000",
+    },
+  ];
+  const propertiesTwo = [
+    {
+      image: "/images/grid-img-4.jpg",
+      address: "2, Sunnyvale Rd",
+      title: "Sunnyvale Retreat",
+      beds: 4,
+      baths: 3,
+      sqft: 2500,
+      price: "$399,000",
+    },
+    {
+      image: "/images/grid-img-5.jpg",
+      address: "29, Surulere Rd",
+      title: "Sky Dive Villa",
+      beds: 4,
+      baths: 6,
+      sqft: 2000,
+      price: "$439,000",
+    },
+    {
+      image: "/images/grid-img-6.jpg",
+      address: "15, Strata Ave",
+      title: "Sunnyvale Retreat",
+      beds: 2,
+      baths: 2,
+      sqft: 1500,
+      price: "$298,000",
+    },
+  ];
   return (
     <div className="min-h-screen bg-contain bg-secondary bg-center flex flex-col  font-poppins">
       <div className="relative flex flex-col items-center justify-center text-white w-full min-h-screen bg-[url('/images/hero-bg.jpg')] bg-cover bg-no-repeat bg-center md:min-h-auto lg:min-h-screen">
@@ -28,9 +88,7 @@ export default function Home() {
               Nature-inspired spaces for modern living and ultimate comfort.
             </p>
 
-            <button className="px-6 py-3 rounded-md bg-primary text-white hover:bg-primary/80 transition duration-300 font-medium mt-8 cursor-pointer">
-              Explore Properties
-            </button>
+            <PrimaryButton> Explore Properties</PrimaryButton>
 
             <PiArrowCircleDownThin className="text-5xl text-white animate-bounce cursor-pointer mt-8" />
           </section>
@@ -50,9 +108,10 @@ export default function Home() {
                 individuality — thoughtfully designed just for you, and crafted
                 to inspire generations to come.
               </p>
-              <button className="mt-4 px-6 py-3 bg-primary text-white rounded-md hover:bg-primary/80 transition duration-300 hidden md:inline-block">
+              <PrimaryButton className="hidden md:flex">
+                {" "}
                 Discover More
-              </button>
+              </PrimaryButton>
             </div>
 
             <div className="relative">
@@ -71,15 +130,12 @@ export default function Home() {
                 className="w-full max-w-md md:max-w-lg lg:max-w-xl absolute  inset-0 -top-16"
               />
             </div>
-            <button className="mt-4 px-6 py-3 bg-primary text-white rounded-md hover:bg-primary/80 transition duration-300  md:hidden">
-              Discover More
-            </button>
+            <PrimaryButton className="md:hidden"> Discover More</PrimaryButton>
           </div>
         </section>
-
-        <section className="flex flex-col justify-center items-center p-4 my-6 sm:px-6 md:px-12 bg-white w-full">
+        <section className="flex flex-col justify-center items-center p-4 py-10 sm:px-6 md:px-12 bg-white w-full">
           <div className="flex flex-col justify-center items-center max-w-5xl md:grid grid-cols-2 gap-10 place-items-center lg:justify-start lg:min-h-screen">
-            <div className="text-center text-secondary md:text-start">
+            <div className="flex flex-col justify-center items-center  text-secondary md:justify-start md:items-start">
               <h2 className="font-semibold text-2xl lg:text-4xl">
                 Let&apos;s Bring you closer to your Dream{" "}
                 <span className="text-primary">Home</span>.
@@ -135,11 +191,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex justify-center md:justify-end ">
-                <button className="mt-8 px-6 py-3 bg-primary text-white rounded-md hover:bg-primary/80 transition duration-300 cursor-pointer">
-                  Schedule a Visit
-                </button>
-              </div>
+              <PrimaryButton className="mt-8"> Schedule a visit</PrimaryButton>
             </div>
 
             <Image
@@ -149,6 +201,56 @@ export default function Home() {
               height={400}
               className="w-full rounded-md hidden md:flex md:-order-1 max-w-md md:max-w-lg lg:max-w-xl "
             />
+          </div>
+        </section>{" "}
+        <section className="flex flex-col justify-center items-center py-8 p-4 sm:px-6 md:px-12 bg-background">
+          <div className="flex flex-col justify-center items-center max-w-5xl lg:min-h-screen w-full">
+            <h2 className="font-semibold text-center text-2xl lg:text-4xl">
+              Explore Our Highly Rated{" "}
+              <span className="text-primary">Apartments</span> &{" "}
+              <span className="text-primary">Buildings</span>.
+            </h2>
+
+            <div className="flex overflow-x-scroll scroll-hidden mt-2 w-full gap-4 py-4 px-2 sm:px-4 md:justify-center">
+              {[
+                "Featured",
+                "Residential",
+                "Apartments",
+                "College",
+                "Duplex",
+              ].map((label) => (
+                <button
+                  key={label}
+                  className={`px-4 py-2 rounded-full border transition shrink-0 cursor-pointer ${
+                    label === "Featured"
+                      ? "bg-secondary text-white border-secondary"
+                      : "border-secondary text-secondary hover:bg-secondary hover:text-white"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            <div className="mt-4 flex overflow-x-auto scroll-hidden gap-6 snap-x snap-mandatory scroll-smooth w-full px-2">
+              {properties.map((p, i) => (
+                <div key={i} className="snap-start">
+                  <PropertyCard {...p} />
+                </div>
+              ))}
+            </div>
+            <div className="mt-12 flex overflow-x-auto scroll-hidden gap-6 snap-x snap-mandatory scroll-smooth w-full px-2">
+              {propertiesTwo.map((p, i) => (
+                <div key={i} className="snap-start">
+                  <PropertyCard {...p} />
+                </div>
+              ))}
+            </div>
+
+            <button
+              className={`px-4 py-2 rounded-full border transition shrink-0 cursor-pointer mt-12`}
+            >
+             View More
+            </button>
           </div>
         </section>
       </main>

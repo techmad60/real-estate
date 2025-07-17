@@ -9,7 +9,7 @@ interface TestimonialProps {
 }
 
 const TestimonialCard = ({ name, location, text, image }: TestimonialProps) => (
-  <div className="flex flex-col items-center text-center gap-3 p-6 bg-white border rounded-xl shadow-sm w-full max-w-lg mx-auto">
+  <div className="flex flex-col items-center text-center gap-3 p-6 bg-white h-full border rounded-xl shadow-sm w-full max-w-lg mx-auto ">
     <Image
       src={image}
       alt={`${name} testimonial`}

@@ -11,7 +11,7 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border-b py-4 w-full max-w-3xl">
+    <div className="border-b py-4 w-full max-w-3xl mx-auto">
       <button
         onClick={() => setOpen(!open)}
         className="flex justify-between items-center w-full text-left"

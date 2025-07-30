@@ -117,7 +117,7 @@ export default function Footer() {
           </h3>
           
           <p className="py-4 text-white">
-            Contact us today let get you that perfect home in instance. The
+            Contact us today and lets get you that perfect home in an instance. The
             luxury that comes with your very own space is top to none.
           </p>
 
@@ -127,7 +127,7 @@ export default function Footer() {
             className="mt-8 inline-block"
             aria-label="Scroll to top"
           >
-            <PiArrowCircleUpThin className="text-5xl hover:text-primary transition-colors text-white" />
+            <PiArrowCircleUpThin className="text-5xl hover:text-6xl transition-colors text-white" />
           </a>
         </div>
       </div>

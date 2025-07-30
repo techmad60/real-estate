@@ -20,6 +20,9 @@ const montsy = Montserrat ({
 export const metadata: Metadata = {
   title: "Parkview Real Estate",
   description: "Where desire meets expectations",
+  icons: {
+    icon: "/images/logo.svg",
+  },
 };
 
 export default function RootLayout({

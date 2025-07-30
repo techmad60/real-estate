@@ -9,7 +9,7 @@ export default function Header() {
 
   return (
     <header className="w-full flex flex-col mx-auto items-center z-50 fixed top-4">
-      <div className="flex flex-col justify-center  backdrop-blur-md bg-white/10 px-6 py-4 rounded-[2.5rem] w-[95%] max-w-5xl text-background shadow-inner shadow-white/10 z-50 transition-all duration-300 border-white/20">
+      <div className="flex flex-col justify-center backdrop-blur-md bg-white/10 px-6 py-4 rounded-[2.5rem] w-[95%] max-w-5xl text-background shadow-inner shadow-white/10 z-50 transition-all duration-300 border-white/20">
         <div className="flex justify-between items-center w-full mx-auto">
           {/* Left side */}
           <p className="text-lg font-semibold text-white">

@@ -85,7 +85,7 @@ export default function IdealPartner() {
         <div className="gradient-overlay absolute inset-0 bg-gradient-to-b from-[rgba(17,17,17,0.2)] to-[rgba(32,32,32,0.7)] z-0" />
         <div 
           ref={contentRef}
-          className="bg-[rgba(255,255,255,0.8)] font-montsy flex flex-col justify-center items-center text-center rounded-4xl p-4 py-8 m-4 my-12 sm:mx-6 md:mx-12 max-w-xl z-40"
+          className="bg-[rgba(255,255,255,0.8)] font-montsy flex flex-col justify-center items-center text-center rounded-4xl p-4 py-8 m-4 my-12 sm:mx-6 md:mx-12 max-w-xl z-0"
         >
           <h3 className="font-semibold text-2xl md:text-3xl">
             What makes us your ideal real estate partner
